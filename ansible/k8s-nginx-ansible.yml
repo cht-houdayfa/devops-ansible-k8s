@@ -1,0 +1,12 @@
+- name: Run Nginx container via Ansible
+  hosts: local
+  become: yes
+
+  tasks:
+    - name: Run nginx container
+      community.docker.docker_container:
+        name: nginx-ansible
+        image: nginx
+        state: started
+        ports:
+          - "8090:80"
