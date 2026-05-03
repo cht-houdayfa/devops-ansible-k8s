@@ -1,5 +1,6 @@
 - name: Run Nginx container via Ansible
-  hosts: local
+  hosts: localhost
+  connection: local
   become: yes
 
   tasks:
