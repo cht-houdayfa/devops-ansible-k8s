@@ -9,5 +9,8 @@
         name: nginx-ansible
         image: nginx
         state: started
+        recreate: yes
         ports:
           - "8090:80"
+        volumes:
+          - /var/tmp/ansible-nginx:/usr/share/nginx/html
